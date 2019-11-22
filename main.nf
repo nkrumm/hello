@@ -7,9 +7,7 @@ process sayHello {
   input: 
     val x from cheers
   script:
-    """
-    echo '$x world!'
-    ./scripts/test.sh
-    """
+  template 'test.sh'
+
 }
 
